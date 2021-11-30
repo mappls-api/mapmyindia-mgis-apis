@@ -151,11 +151,11 @@ Need support? contact us!
 
 <br>
 
-[<p align="center"><img src="https://www.mapmyindia.com/api/img/icons/stack-overflow.png"/>](https://stackoverflow.com/questions/tagged/mapmyindia-api)[![](https://www.mapmyindia.com/api/img/icons/blog.png)](http://www.mapmyindia.com/blog/)[![](https://www.mapmyindia.com/api/img/icons/gethub.png)](https://github.com/MapmyIndia)[<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/npm-logo.one-third%5B1%5D.png" height="40"/></p>](https://www.npmjs.com/org/mapmyindia) 
+[<img src="https://www.mapmyindia.com/api/img/icons/stack-overflow.png" class="align-center"/>](https://stackoverflow.com/questions/tagged/mapmyindia-api)[<img src="https://www.mapmyindia.com/api/img/icons/blog.png" class="align-center"/>](http://www.mapmyindia.com/blog/)[<img src="https://www.mapmyindia.com/api/img/icons/gethub.png" class="align-center"/>](https://github.com/MapmyIndia)[<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/npm-logo.one-third%5B1%5D.png" height="40" class="align-center"/>](https://www.npmjs.com/org/mapmyindia) 
 
 
 
-[<p align="center"> <img src="https://www.mapmyindia.com/june-newsletter/icon4.png"/> ](https://www.facebook.com/MapmyIndia)[![](https://www.mapmyindia.com/june-newsletter/icon2.png)](https://twitter.com/MapmyIndia)[![](https://www.mapmyindia.com/newsletter/2017/aug/llinkedin.png)](https://www.linkedin.com/company/mapmyindia)[![](https://www.mapmyindia.com/june-newsletter/icon3.png)](https://www.youtube.com/user/MapmyIndia/)
+[<img src="https://www.mapmyindia.com/june-newsletter/icon4.png" class="align-center"/> ](https://www.facebook.com/MapmyIndia)[<img src="https://www.mapmyindia.com/june-newsletter/icon2.png" class="align-center"/>)](https://twitter.com/MapmyIndia)[<img src="https://www.mapmyindia.com/newsletter/2017/aug/llinkedin.png" class="align-center"/>)](https://www.linkedin.com/company/mapmyindia)[<img src="https://www.mapmyindia.com/june-newsletter/icon3.png" class="align-center"/>)](https://www.youtube.com/user/MapmyIndia/)
 
 
 
