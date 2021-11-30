@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p><a href="https://www.mapmyindia.com/api"><img src="https://www.mapmyindia.com/api/img/mapmyindia-api.png" height="40"/> </p></a></p>
+<h1 id="mapmyindia-mgis-apis">MapmyIndia mGIS APIs</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Using these APIs developers can fully leverage and embed the power of GeoSpatial Analytics, GIS and location intelligence and AI. These APIs allow a developer to integrate into their own application the power and full set of functionalities of the mGIS product and platform.</p>
+<h2 id="api-features">API Features</h2>
+<p>mGIS APIs are grouped under various categories providing wide range of functionalities
+which can be leveraged by enterprise and consumer</p>
+<ul>
+<li><a href="#search-and-navigation-apis">Search &amp; Navigation APIs</a></li>
+<li><a href="#data-operations-apis">Data Operations APIs</a></li>
+<li><a href="#layer-styling-apis">Layer Styling APIs</a></li>
+<li><a href="#dataset-query-and-validation-apis">Dataset Query &amp; Validation APIs</a></li>
+<li><a href="#layer-visualization-and-info-apis">Layer Visualization &amp; Info APIs</a></li>
+<li><a href="#satellite-image-segmentation-api">Satellite Image Segmentation API</a></li>
+</ul>
+<h2 id="how-mgis-apis-enhance-value-of-any-solution">How mGIS APIs Enhance Value of any Solution</h2>
+<p>mGIS can serve different types of customers on the basis of the type of analytics
+OR on the basis of the type of datasets they possess. E.g. a user who has a non spatial address dataset wants to upload on mGIS and perform geospatial visualization and queries.</p>
+<h3 id="see-video-demo"><a href="https://www.mapmyindia.com/api/mgis-api/images/mgis/how-mgis-apis-e-value-of-any-solution_1.mp4">See Video Demo</a></h3>
+<h3 id="for-this-you-will-perform-below-steps">For this you will perform below steps:</h3>
+<ul>
+<li>Use ‘generate batch geocode layer’ to get geospatial references of your dataset</li>
+<li>Use SAT API to save the resultant as a new layer or append into existing layer (above steps will add layer with basic style)</li>
+<li>Use Styling API in case you need to do visualisation based analytics</li>
+<li>Use Layer Visualisation API to get WMS image and feature info of a feature. Using this API you can also get the legend of the layer</li>
+<li>Use Dataset Query APIs to perform basic and cross join analytics on your dataset, resultant of which can be further saved.</li>
+</ul>
+<br>
+<h2 id="search-and-navigation-apis">Search And Navigation APIs</h2>
+<p>Search and Navigation APIs group consist of APIs which can be used to perform batch operations.</p>
+<p>These APIs can take input in several form factors:</p>
+<pre class="hljs"><code><div>.csv | .xlsx | xls | XLSX | XLS | xlt | XLT | xlsm | XLSM | xltx | XLTX
+</div></code></pre>
+<h3 id="see-video-demo"><a href="https://www.mapmyindia.com/api/mgis-api/images/mgis/search-and-navigation-apis-mgis.mp4">See Video Demo</a></h3>
+<h3 id="generate-batch-geocode-layer">Generate Batch Geocode Layer</h3>
+<p>This API is useful if the user has a list of addresses and wants to have them georeferenced for visualization and analytics.</p>
+<h3 id="generate-batch-rev-geocode-layer">Generate Batch Rev-Geocode Layer</h3>
+<p>If the user has a list of latitude and longitude values and wishes to categorize them based on belonging to residential/commercial areas, this API can be used.</p>
+<h3 id="generate-batch-routing-layer">Generate Batch Routing Layer</h3>
+<p>Generally, when a user wishes to see multiple routes for multiple route points and wants to align them visually on the basis of travel time/distance to make some decision, this API is used to generate said travel graphs.</p>
+<br>
+<h2 id="data-operations-apis">Data Operations APIs</h2>
+<p>This group of APIs are used for adding the datasets in different formats to the mGIS engine</p>
+<p>These APIs support below datasets:</p>
+<pre class="hljs"><code><div>GEOJSON | KML | CSV | XLSX | XLS | SHP(ZIP) | XLSM | XLT | XLTX
+</div></code></pre>
+<h3 id="see-video-demo"><a href="https://www.mapmyindia.com/api/mgis-api/images/mgis/data-operation.mp4">See Video Demo</a></h3>
+<h3 id="sat-save-append-and-truncate-api">SAT (Save, Append and Truncate) API</h3>
+<p>This API is used to save user dataset with multiple saving options like append, truncate etc. on mGIS cloud with basic visualisation style.</p>
+<h3 id="describe-dataset-api">Describe Dataset API</h3>
+<p>Describe Dataset API provides all attribute names along with the data type of a dataset.</p>
+<h3 id="get-layer-list-api">Get Layer List API</h3>
+<p>This API lists down all the datasets that exist on an mGIS user’s cloud along with the geometry type of each dataset.</p>
+<h3 id="get-geometry-type-api">Get Geometry Type API</h3>
+<p>This API returns the geometry type of a single dataset (Line/Point /Polygon/Multi Geometry).</p>
+<h3 id="get-dataset-api">Get Dataset API</h3>
+<p>This API reads a dataset with options like read entire dataset, read only specific attributes of a dataset etc.</p>
+<br>
+<h2 id="layer-styling-apis">Layer Styling APIs</h2>
+<p>Layer Styling API is used to update and add new styles to existing datasets.</p>
+<h3 id="see-video-demo"><a href="https://www.mapmyindia.com/api/mgis-api/images/mgis/layer-styling-apis.mp4">See Video Demo</a></h3>
+<p>These layer styles are listed below:</p>
+<ul>
+<li>Basic Style</li>
+<li>Category Based Style</li>
+<li>Bubble Style</li>
+<li>Cluster Style</li>
+<li>Gradient Style</li>
+<li>Heatmap Style</li>
+<li>Pie Chart Style</li>
+<li>Bar Chart Style</li>
+<li>Style with label</li>
+</ul>
+<br>
+<h2 id="dataset-query-and-validation-apis">Dataset Query And Validation APIs</h2>
+<p>This group of APIs are used to perform different data analytics and save results as a new dataset.</p>
+<h3 id="see-video-demo"><a href="https://www.mapmyindia.com/api/mgis-api/images/mgis/dataset-query-and-validation-apis.mp4">See Video Demo</a></h3>
+<p>User can perform below operations on dataset :</p>
+<ul>
+<li>Results can be fetched of the basic query, cross join query and spatial query like In, NOT, IN, Like etc.</li>
+<li>Arithmetic operations, geometric operations and aggregate operations can be performed through query on a dataset.</li>
+<li>Order by and Group by with a query can be applied on a dataset.</li>
+</ul>
+<br>
+<h2 id="layer-visualization-and-info-apis">Layer Visualization And Info APIs</h2>
+<p>This group consists of multiple APIs that allow users to visualise and analyse their dataset using different styles, get feature info of a feature and legends.</p>
+<h3 id="see-video-demo"><a href="https://www.mapmyindia.com/api/mgis-api/images/mgis/layer-visualizationandinfo-api.mp4">See Video Demo</a></h3>
+<p>These APIs form the basic foundation of geo visualisation and geo analytics.</p>
+<h3 id="get-map-api">Get Map API</h3>
+<p>This API fetches the map tiles of an entire dataset with basic queries, queried results of cross join/spatial join between two datasets and geometric function can be performed as well.</p>
+<h3 id="get-feature-info-api">Get Feature Info API</h3>
+<p>This API fetches information of a feature that lies on the x and y pixel at which the user clicks. Response of the API changes based on the style that user has assigned to it.</p>
+<h3 id="get-legend-image-api">Get Legend Image API</h3>
+<p>This API fetches the legend of a dataset as an image which can then be used by developers on their platform to display on canvas (similar to mGIS).</p>
+<br>
+<h2 id="satellite-image-segmentation-api">Satellite Image Segmentation API</h2>
+<p>The processing of satellite images for map representation with cutting edge CV/AI methodologies.
+Our Satellite Image Segmentation API automatically categorizes things in the image and generates a map view from satellite images.</p>
+<h3 id="see-video-demo"><a href="https://www.mapmyindia.com/api/mgis-api/images/mgis/layer-visualizationandinfo-api.mp4">See Video Demo</a></h3>
+<p>The API detects and categorizes the below objects:</p>
+<ul>
+<li>Footprint</li>
+<li>Roads</li>
+<li>Soil</li>
+<li>Vegetation</li>
+<li>Water</li>
+</ul>
+<p>User can pass set of satellite images from two different time periods to see the change in the development like building footprints and road build over time.</p>
+<p>The Geojson output can be visualized on mGIS or any geo spatial platform to analyze.</p>
+<p><br><br>
+For any queries and support, please contact:</p>
+<p><a href="https://www.mapmyindia.com/api"><img src="https://www.mapmyindia.com/images/logo.png" height="40"/> </p></a>
+Email us at <a href="mailto:apisupport@mapmyindia.com">apisupport@mapmyindia.com</a></p>
+<p><img src="https://www.mapmyindia.com/api/img/icons/support.png" alt="">
+<a href="https://www.mapmyindia.com/api/index.php#f_cont">Support</a>
+Need support? contact us!</p>
+<br>
+<p><a href="https://stackoverflow.com/questions/tagged/mapmyindia-api"><p align="center"> <img src="https://www.mapmyindia.com/api/img/icons/stack-overflow.png"/> </a><a href="http://www.mapmyindia.com/blog/"><img src="https://www.mapmyindia.com/api/img/icons/blog.png" alt=""></a><a href="https://github.com/MapmyIndia"><img src="https://www.mapmyindia.com/api/img/icons/gethub.png" alt=""></a><a href="https://www.npmjs.com/org/mapmyindia"><img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/npm-logo.one-third%5B1%5D.png" height="40"/> </p></a></p>
+<p><a href="https://www.facebook.com/MapmyIndia"><p align="center"> <img src="https://www.mapmyindia.com/june-newsletter/icon4.png"/> </a><a href="https://twitter.com/MapmyIndia"><img src="https://www.mapmyindia.com/june-newsletter/icon2.png" alt=""></a><a href="https://www.linkedin.com/company/mapmyindia"><img src="https://www.mapmyindia.com/newsletter/2017/aug/llinkedin.png" alt=""></a><a href="https://www.youtube.com/user/MapmyIndia/"><img src="https://www.mapmyindia.com/june-newsletter/icon3.png" alt=""></a></p>
+<div align="center">@ Copyright 2020 CE Info Systems Pvt. Ltd. All Rights Reserved.</div>
+<div align="center"> <a href="https://www.mapmyindia.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://www.mapmyindia.com/about/privacy-policy">Privacy Policy</a> | <a href="https://www.mapmyindia.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://www.mapmyindia.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://www.mapmyindia.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
+<div align="center">Customer Care: +91-9999333223</div>
+</body>
+</html>
