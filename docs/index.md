@@ -41,7 +41,6 @@ These APIs can take input in several form factors:
 ```
 
 ### Documentation
-
 [Contact API Support](mailto:apisupport@mapmyindia.com)
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/search-and-navigation-apis-mgis.mp4)
@@ -101,6 +100,9 @@ This API reads a dataset with options like read entire dataset, read only specif
 ## Layer Styling APIs
 Layer Styling API is used to update and add new styles to existing datasets.
 
+#### Documentation
+[Contact API Support](mailto:apisupport@mapmyindia.com)
+
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/layer-styling-apis.mp4)
 
 These layer styles are listed below:
@@ -119,6 +121,9 @@ These layer styles are listed below:
 ## Dataset Query And Validation APIs
 This group of APIs are used to perform different data analytics and save results as a new dataset.
 
+#### Documentation
+[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Dataset%20Query%20And%20Validation%20APIs)
+
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/dataset-query-and-validation-apis.mp4)
 
 User can perform below operations on dataset :
@@ -131,6 +136,9 @@ User can perform below operations on dataset :
 ## Layer Visualization And Info APIs
 
 This group consists of multiple APIs that allow users to visualise and analyse their dataset using different styles, get feature info of a feature and legends.
+
+#### Documentation
+[Contact API Support](mailto:apisupport@mapmyindia.com)
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/layer-visualizationandinfo-api.mp4)
 
@@ -147,6 +155,9 @@ This API fetches the legend of a dataset as an image which can then be used by d
 ## Satellite Image Segmentation API
 The processing of satellite images for map representation with cutting edge CV/AI methodologies.
 Our Satellite Image Segmentation API automatically categorizes things in the image and generates a map view from satellite images.
+
+#### Documentation
+[Contact API Support](mailto:apisupport@mapmyindia.com)
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/layer-visualizationandinfo-api.mp4)
 
