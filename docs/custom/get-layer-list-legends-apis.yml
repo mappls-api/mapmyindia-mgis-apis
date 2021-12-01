@@ -1,0 +1,232 @@
+openapi: 3.0.1
+info:
+  title: L3 (Layer List and Legends) API
+  description: |-
+    *L3 API provides the following functionality: <ul><li>Fetches the names of all the datasets available in the user's workspace on the geoserver.</li> <li>Fetches the image of legends for the input dataset.</li></ul><br><br><hr><br>[<img src="https://www.mapmyindia.com/api/img/mapmyindia-api.png" height="40"/>](https://www.mapmyindia.com/api)
+
+    On a Mission to <b>"Make our world better through maps, location technologies & IoT"</b>, MapmyIndia is continuously enabling real time hyper-local information access through its map & location services. mGIS APIs are a part of mGIS platform and the document describes APIs usage and specifications for their integration into an application. The document covers :
+    <ul><li>List of APIs</ul></li> 
+    <ul><li>Explanation of resources and query parameters</ul></li>
+    <ul><li>Listing of response structure</ul></li>
+
+    ## Important notes
+     <ul><li><b>URLs</b>: the urls to use for UAT and Production are:  <ul><li>
+     <b>Production</b>:
+    <code>https://mgis-api.mapmyindia.com/</code></li><li>
+     <b>UAT</b>:<code>https://mgis-preprod.mapmyindia.in/</code><li> To call our API, the
+    endpoint requires access-token authorization and the <code>access-token</code> needs to be entered. For example <code>https://mgis.mapmyindia.in/getLayersList </code> <br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
+  contact:
+    name: MapmyIndia API Support
+    url: 'https://www.mapmyindia.com/api/#f_cont'
+    email: apisupport@mapmyindia.com
+  termsOfService: 'https://www.mapmyindia.com/api/terms-&-conditions'
+  version: V1.0.0  
+tags:
+  - name: L3 (Layer List and Legends) API
+    description: Fetches the names of all the datasets available in the user's workspace on the geoserver.
+servers:
+  - url: 'https://mgis-api.mapmyindia.com/'
+    description: Production server for mGIS APIs
+  - url: 'https://mgis-preprod.mapmyindia.in/'
+    description: UAT server for mGIS APIs testing
+paths:
+  /getLayersList:
+    get:
+      tags:
+        - L3 (Layer List and Legends) API
+      summary: Fetches the names of all the datasets available in the user's workspace on the geoserver.
+      description: Fetches the names of all the datasets available in the user's workspace on the geoserver.
+      operationId: getLayersListId
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getLayersListRes'
+        '400':
+          description: 'Bad Request, User made an error while creating a valid request.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObjectCommon'
+        '404':
+          description: No data found in database.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObjectCommon'
+        '500':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject500'
+      deprecated: false
+  /getLegendsImg:
+    get:
+      tags:
+        - L3 (Layer List and Legends) API
+      summary: Fetches the image of legends for the given dataset.
+      description: Fetches the image of legends for the given dataset.
+      operationId: getLegendsImgId
+      parameters:
+        - $ref: '#/components/parameters/datasetNme'
+        - $ref: '#/components/parameters/stylename'
+        - $ref: '#/components/parameters/polygonfillcolor'
+        - $ref: '#/components/parameters/polygonfillopacity'
+        - $ref: '#/components/parameters/linestrokecolor'
+        - $ref: '#/components/parameters/linestrokewidth'
+        - $ref: '#/components/parameters/linestrokeopacity'
+        - $ref: '#/components/parameters/pointfillcolor'
+        - $ref: '#/components/parameters/pointfillopacity'
+        - $ref: '#/components/parameters/pointsize'
+      responses:
+        '200':
+          description: Legend image in PNG format
+          content:
+            image/png:
+              schema:
+                type: string
+                format: binary
+        '500':
+          description: 'Bad Request, User made an error while creating a valid request.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject500'
+      deprecated: false
+components:
+  parameters:
+    datasetNme:
+      name: datasetNme
+      in: query
+      description: geoserver layername
+      required: true
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: ind_rails
+    stylename:
+      name: stylename
+      in: query
+      description: Any available styles for layer.
+      required: false
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: line
+    polygonfillcolor:
+      name: polygonfillcolor
+      in: query
+      description: Any color hex code.
+      required: false
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: ffffff
+    polygonfillopacity:
+      name: polygonfillopacity
+      in: query
+      description: value between 0-1.
+      required: false
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: 0.5
+    linestrokecolor:
+      name: linestrokecolor
+      in: query
+      description: Any color hex code.
+      required: false
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: ffffff
+    linestrokewidth:
+      name: linestrokewidth
+      in: query
+      description: with value.
+      required: false
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: 10
+    linestrokeopacity:
+      name: linestrokeopacity
+      in: query
+      description: value between 0-1.
+      required: false
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: 0.2
+    pointfillcolor:
+      name: pointfillcolor
+      in: query
+      description: Any color hex code.
+      required: false
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: ffffff
+    pointfillopacity:
+      name: pointfillopacity
+      in: query
+      description: value between 0-1.
+      required: false
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: 0.3
+    pointsize:
+      name: pointsize
+      in: query
+      description: size value.
+      required: false
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: 20
+  schemas:
+    getLayersListRes:
+      type: array
+      items:
+        type: object
+        properties:
+          layername:
+            type: string
+            example: geocode_ii
+          geometrytype:
+            type: string
+            example: POLYGON
+    ErrorObjectCommon:
+      title: ErrorObject
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '404'
+        error:
+          type: string
+          description: Different error messages that might have occured while making a particular request to the server
+          example: Bad request. Username not found.
+    ErrorObject500:
+      title: Internal Server ErrorObject
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '500'
+        error:
+          type: string
+          description: Different error messages that might have occured while making a particular request to the server
+          example: Something went wrong.
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []
