@@ -40,6 +40,10 @@ These APIs can take input in several form factors:
 .csv | .xlsx | xls | XLSX | XLS | xlt | XLT | xlsm | XLSM | xltx | XLTX
 ```
 
+### Documentation
+
+[Contact API Support](mailto:apisupport@mapmyindia.com)
+
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/search-and-navigation-apis-mgis.mp4)
 
 
@@ -64,6 +68,11 @@ GEOJSON | KML | CSV | XLSX | XLS | SHP(ZIP) | XLSM | XLT | XLTX
 
 ### SAT (Save, Append and Truncate) API
 This API is used to save user dataset with multiple saving options like append, truncate etc. on mGIS cloud with basic visualisation style.
+
+#### Documentation
+
+[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html)
+
 ### Describe Dataset API
 Describe Dataset API provides all attribute names along with the data type of a dataset.
 ### Get Layer List API
