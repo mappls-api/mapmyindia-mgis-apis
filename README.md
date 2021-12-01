@@ -1,4 +1,4 @@
-[<img src="https://www.mapmyindia.com/api/img/mapmyindia-api.png" height="40"/> </p>](https://www.mapmyindia.com/api)
+[<img src="https://www.mapmyindia.com/api/img/mapmyindia-api.png" height="40"/>](https://www.mapmyindia.com/api)
 
 # MapmyIndia mGIS APIs
 
@@ -40,6 +40,9 @@ These APIs can take input in several form factors:
 .csv | .xlsx | xls | XLSX | XLS | xlt | XLT | xlsm | XLSM | xltx | XLTX
 ```
 
+### Documentation
+[Contact API Support](mailto:apisupport@mapmyindia.com)
+
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/search-and-navigation-apis-mgis.mp4)
 
 
@@ -64,19 +67,41 @@ GEOJSON | KML | CSV | XLSX | XLS | SHP(ZIP) | XLSM | XLT | XLTX
 
 ### SAT (Save, Append and Truncate) API
 This API is used to save user dataset with multiple saving options like append, truncate etc. on mGIS cloud with basic visualisation style.
+
+#### Documentation
+[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20SAT%20APIs)
+
 ### Describe Dataset API
 Describe Dataset API provides all attribute names along with the data type of a dataset.
+
+#### Documentation
+[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20Describe%20Dataset%20API)
+
 ### Get Layer List API
 This API lists down all the datasets that exist on an mGIS user’s cloud along with the geometry type of each dataset.
+
+#### Documentation
+[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20Get%20Layer%20List%20and%20Legends%20APIs)
+
 ### Get Geometry Type API
 This API returns the geometry type of a single dataset (Line/Point /Polygon/Multi Geometry).
+
+#### Documentation
+[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20Get%20Geometry%20Type%20API)
+
 ### Get Dataset API
 This API reads a dataset with options like read entire dataset, read only specific attributes of a dataset etc.
+
+#### Documentation
+[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20Get%20Dataset%20API)
 
 <br>
 
 ## Layer Styling APIs
 Layer Styling API is used to update and add new styles to existing datasets.
+
+#### Documentation
+[Contact API Support](mailto:apisupport@mapmyindia.com)
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/layer-styling-apis.mp4)
 
@@ -96,6 +121,9 @@ These layer styles are listed below:
 ## Dataset Query And Validation APIs
 This group of APIs are used to perform different data analytics and save results as a new dataset.
 
+#### Documentation
+[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Dataset%20Query%20And%20Validation%20APIs)
+
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/dataset-query-and-validation-apis.mp4)
 
 User can perform below operations on dataset :
@@ -108,6 +136,9 @@ User can perform below operations on dataset :
 ## Layer Visualization And Info APIs
 
 This group consists of multiple APIs that allow users to visualise and analyse their dataset using different styles, get feature info of a feature and legends.
+
+#### Documentation
+[Contact API Support](mailto:apisupport@mapmyindia.com)
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/layer-visualizationandinfo-api.mp4)
 
@@ -125,7 +156,8 @@ This API fetches the legend of a dataset as an image which can then be used by d
 The processing of satellite images for map representation with cutting edge CV/AI methodologies.
 Our Satellite Image Segmentation API automatically categorizes things in the image and generates a map view from satellite images.
 
-### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/layer-visualizationandinfo-api.mp4)
+#### Documentation
+[Contact API Support](mailto:apisupport@mapmyindia.com)
 
 The API detects and categorizes the below objects:
 - Footprint

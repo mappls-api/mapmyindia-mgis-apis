@@ -159,7 +159,6 @@ Our Satellite Image Segmentation API automatically categorizes things in the ima
 #### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
 
-### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/layer-visualizationandinfo-api.mp4)
 
 The API detects and categorizes the below objects:
 - Footprint
