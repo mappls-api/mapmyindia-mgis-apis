@@ -21,6 +21,8 @@ which can be leveraged by enterprise and consumer
 mGIS can serve different types of customers on the basis of the type of analytics
 OR on the basis of the type of datasets they possess. E.g. a user who has a non spatial address dataset wants to upload on mGIS and perform geospatial visualization and queries.
 
+<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/mGIS-APIs/userstiory_section1.gif" style="margin-left:auto;margin-right:auto"/>
+
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/how-mgis-apis-e-value-of-any-solution_1.mp4)
 
 ### For this you will perform below steps:
@@ -40,11 +42,12 @@ These APIs can take input in several form factors:
 .csv | .xlsx | xls | XLSX | XLS | xlt | XLT | xlsm | XLSM | xltx | XLTX
 ```
 
+<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/mGIS-APIs/batchroute_section2.gif" style="margin-left:auto;margin-right:auto"/>
+
 ### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/search-and-navigation-apis-mgis.mp4)
-
 
 ### Generate Batch Geocode Layer
 This API is useful if the user has a list of addresses and wants to have them georeferenced for visualization and analytics.
@@ -62,6 +65,8 @@ These APIs support below datasets:
 ```
 GEOJSON | KML | CSV | XLSX | XLS | SHP(ZIP) | XLSM | XLT | XLTX
 ```
+
+<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/mGIS-APIs/getdataset_section3.gif" style="margin-left:auto;margin-right:auto"/>
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/data-operation.mp4)
 
@@ -100,6 +105,8 @@ This API reads a dataset with options like read entire dataset, read only specif
 ## Layer Styling APIs
 Layer Styling API is used to update and add new styles to existing datasets.
 
+<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/mGIS-APIs/styling_section4.gif" style="margin-left:auto;margin-right:auto"/>
+
 #### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
 
@@ -121,6 +128,8 @@ These layer styles are listed below:
 ## Dataset Query And Validation APIs
 This group of APIs are used to perform different data analytics and save results as a new dataset.
 
+<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/mGIS-APIs/QAV_section5.gif" style="margin-left:auto;margin-right:auto"/>
+
 #### Documentation
 [Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Dataset%20Query%20And%20Validation%20APIs)
 
@@ -136,6 +145,8 @@ User can perform below operations on dataset :
 ## Layer Visualization And Info APIs
 
 This group consists of multiple APIs that allow users to visualise and analyse their dataset using different styles, get feature info of a feature and legends.
+
+<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/mGIS-APIs/visualization_section6.gif" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
@@ -155,6 +166,8 @@ This API fetches the legend of a dataset as an image which can then be used by d
 ## Satellite Image Segmentation API
 The processing of satellite images for map representation with cutting edge CV/AI methodologies.
 Our Satellite Image Segmentation API automatically categorizes things in the image and generates a map view from satellite images.
+
+<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/mGIS-APIs/vision_section7.gif" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
