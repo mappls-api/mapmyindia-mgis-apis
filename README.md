@@ -22,7 +22,7 @@ which can be leveraged by enterprise and consumer
 mGIS can serve different types of customers on the basis of the type of analytics
 OR on the basis of the type of datasets they possess. E.g. a user who has a non spatial address dataset wants to upload on mGIS and perform geospatial visualization and queries.
 
-<img src="./images/userstiory_section1.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src=".docs/images/userstiory_section1.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/how-mgis-apis-e-value-of-any-solution_1.mp4)
 
