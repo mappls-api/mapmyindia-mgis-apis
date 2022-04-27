@@ -43,7 +43,7 @@ These APIs can take input in several form factors:
 .csv | .xlsx | xls | XLSX | XLS | xlt | XLT | xlsm | XLSM | xltx | XLTX
 ```
 
-<img src="./images/BatchOperatoions.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./docs/images/BatchOperatoions.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 ### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
@@ -67,7 +67,7 @@ These APIs support below datasets:
 GEOJSON | KML | CSV | XLSX | XLS | SHP(ZIP) | XLSM | XLT | XLTX
 ```
 
-<img src="./images/getdataset_section3.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./docs/images/getdataset_section3.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/data-operation.mp4)
 
@@ -106,7 +106,7 @@ This API reads a dataset with options like read entire dataset, read only specif
 ## Layer Styling APIs
 Layer Styling API is used to update and add new styles to existing datasets.
 
-<img src="./images/07_Style.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./docs/images/07_Style.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
@@ -130,7 +130,7 @@ These layer styles are listed below:
 ## Dataset Query And Validation APIs
 This group of APIs are used to perform different data analytics and save results as a new dataset.
 
-<img src="./images/04_QueryBuilder.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./docs/images/04_QueryBuilder.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
 [Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Dataset%20Query%20And%20Validation%20APIs)
@@ -148,7 +148,7 @@ User can perform below operations on dataset :
 
 This group consists of multiple APIs that allow users to visualise and analyse their dataset using different styles, get feature info of a feature and legends.
 
-<img src="./images/visualization_section6.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./docs/images/visualization_section6.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
@@ -169,7 +169,7 @@ This API fetches the legend of a dataset as an image which can then be used by d
 The processing of satellite images for map representation with cutting edge CV/AI methodologies.
 Our Satellite Image Segmentation API automatically categorizes things in the image and generates a map view from satellite images.
 
-<img src="./images/11_Vision.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./docs/images/11_Vision.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
@@ -191,7 +191,7 @@ The Geojson output can be visualized on mGIS or any geo spatial platform to anal
 ## Raster Catalogue APIs
 This group of APIS are used to fetches Raster layerlist images, legends and bounds for the particular dataset.
 
-<img src="./images/rasterCatalog.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./docs/images/rasterCatalog.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
