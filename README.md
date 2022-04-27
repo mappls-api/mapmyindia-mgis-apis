@@ -16,12 +16,13 @@ which can be leveraged by enterprise and consumer
 - [Dataset Query & Validation APIs](#dataset-query-and-validation-apis)
 - [Layer Visualization & Info APIs](#layer-visualization-and-info-apis)
 - [Satellite Image Segmentation API](#satellite-image-segmentation-api)
+- [Raster Catalogue APIs](#raster-catalogue-api)
 
 ## How mGIS APIs Enhance Value of any Solution
 mGIS can serve different types of customers on the basis of the type of analytics
 OR on the basis of the type of datasets they possess. E.g. a user who has a non spatial address dataset wants to upload on mGIS and perform geospatial visualization and queries.
 
-<img src="./docs/images/userstiory_section1.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./images/userstiory_section1.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/how-mgis-apis-e-value-of-any-solution_1.mp4)
 
@@ -42,7 +43,7 @@ These APIs can take input in several form factors:
 .csv | .xlsx | xls | XLSX | XLS | xlt | XLT | xlsm | XLSM | xltx | XLTX
 ```
 
-<img src="./docs/images/batchroute_section2.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./images/BatchOperatoions.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 ### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
@@ -66,7 +67,7 @@ These APIs support below datasets:
 GEOJSON | KML | CSV | XLSX | XLS | SHP(ZIP) | XLSM | XLT | XLTX
 ```
 
-<img src="./docs/images/getdataset_section3.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./images/getdataset_section3.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/data-operation.mp4)
 
@@ -105,7 +106,7 @@ This API reads a dataset with options like read entire dataset, read only specif
 ## Layer Styling APIs
 Layer Styling API is used to update and add new styles to existing datasets.
 
-<img src="./docs/images/styling_section4.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./images/07_Style.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
@@ -121,6 +122,7 @@ These layer styles are listed below:
 - Heatmap Style
 - Pie Chart Style
 - Bar Chart Style
+- D3bubble style
 - Style with label
 
 <br>
@@ -128,7 +130,7 @@ These layer styles are listed below:
 ## Dataset Query And Validation APIs
 This group of APIs are used to perform different data analytics and save results as a new dataset.
 
-<img src="./docs/images/QAV_section5.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./images/04_QueryBuilder.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
 [Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Dataset%20Query%20And%20Validation%20APIs)
@@ -146,7 +148,7 @@ User can perform below operations on dataset :
 
 This group consists of multiple APIs that allow users to visualise and analyse their dataset using different styles, get feature info of a feature and legends.
 
-<img src="./docs/images/visualization_section6.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./images/visualization_section6.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
@@ -167,7 +169,7 @@ This API fetches the legend of a dataset as an image which can then be used by d
 The processing of satellite images for map representation with cutting edge CV/AI methodologies.
 Our Satellite Image Segmentation API automatically categorizes things in the image and generates a map view from satellite images.
 
-<img src="./docs/images/vision_section7.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+<img src="./images/11_Vision.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
 [Contact API Support](mailto:apisupport@mapmyindia.com)
@@ -184,10 +186,22 @@ User can pass set of satellite images from two different time periods to see the
 
 The Geojson output can be visualized on mGIS or any geo spatial platform to analyze.
 
-<br><br>
+<br>
+
+## Raster Catalogue APIs
+This group of APIS are used to fetches Raster layerlist images, legends and bounds for the particular dataset.
+
+<img src="./images/rasterCatalog.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
+
+#### Documentation
+[Contact API Support](mailto:apisupport@mapmyindia.com)
+
+
+### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/data-operation.mp4)
+<br>
 For any queries and support, please contact: 
 
-[<img src="https://www.mapmyindia.com/images/logo.png" height="40"/> </p>](https://www.mapmyindia.com/api)
+[<img src="https://www.mapmyindia.com/images/logo.png" height="40"/> ](https://www.mapmyindia.com/api)
 Email us at [apisupport@mapmyindia.com](mailto:apisupport@mapmyindia.com)
 
 
@@ -197,11 +211,11 @@ Need support? contact us!
 
 <br>
 
-[<p align="center"> <img src="https://www.mapmyindia.com/api/img/icons/stack-overflow.png"/> ](https://stackoverflow.com/questions/tagged/mapmyindia-api)[![](https://www.mapmyindia.com/api/img/icons/blog.png)](http://www.mapmyindia.com/blog/)[![](https://www.mapmyindia.com/api/img/icons/gethub.png)](https://github.com/MapmyIndia)[<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/npm-logo.one-third%5B1%5D.png" height="40"/> </p>](https://www.npmjs.com/org/mapmyindia) 
+[<img src="https://www.mapmyindia.com/api/img/icons/stack-overflow.png" class="align-center"/>](https://stackoverflow.com/questions/tagged/mapmyindia-api)[<img src="https://www.mapmyindia.com/api/img/icons/blog.png" class="align-center"/>](http://www.mapmyindia.com/blog/)[<img src="https://www.mapmyindia.com/api/img/icons/gethub.png" class="align-center"/>](https://github.com/MapmyIndia)[<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/npm-logo.one-third%5B1%5D.png" height="40" class="align-center"/>](https://www.npmjs.com/org/mapmyindia) 
 
 
 
-[<p align="center"> <img src="https://www.mapmyindia.com/june-newsletter/icon4.png"/> ](https://www.facebook.com/MapmyIndia)[![](https://www.mapmyindia.com/june-newsletter/icon2.png)](https://twitter.com/MapmyIndia)[![](https://www.mapmyindia.com/newsletter/2017/aug/llinkedin.png)](https://www.linkedin.com/company/mapmyindia)[![](https://www.mapmyindia.com/june-newsletter/icon3.png)](https://www.youtube.com/user/MapmyIndia/)
+[<img src="https://www.mapmyindia.com/june-newsletter/icon4.png" class="align-center"/> ](https://www.facebook.com/MapmyIndia)[<img src="https://www.mapmyindia.com/june-newsletter/icon2.png" class="align-center"/>)](https://twitter.com/MapmyIndia)[<img src="https://www.mapmyindia.com/newsletter/2017/aug/llinkedin.png" class="align-center"/>)](https://www.linkedin.com/company/mapmyindia)[<img src="https://www.mapmyindia.com/june-newsletter/icon3.png" class="align-center"/>)](https://www.youtube.com/user/MapmyIndia/)
 
 
 
