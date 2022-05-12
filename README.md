@@ -1,3 +1,4 @@
+
 [<img src="https://www.mapmyindia.com/api/img/mapmyindia-api.png" height="40"/>](https://www.mapmyindia.com/api)
 
 # MapmyIndia mGIS APIs
@@ -16,6 +17,8 @@ which can be leveraged by enterprise and consumer
 - [Dataset Query & Validation APIs](#dataset-query-and-validation-apis)
 - [Layer Visualization & Info APIs](#layer-visualization-and-info-apis)
 - [Satellite Image Segmentation API](#satellite-image-segmentation-api)
+- [Face Detection & Blurring API ](#Face-Detection-&-Blurring-API)
+
 - [Raster Catalogue APIs](#raster-catalogue-api)
 
 ## How mGIS APIs Enhance Value of any Solution
@@ -164,6 +167,78 @@ This API fetches information of a feature that lies on the x and y pixel at whic
 This API fetches the legend of a dataset as an image which can then be used by developers on their platform to display on canvas (similar to mGIS).
 
 <br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+## Face Detection & Blurring API
+
+It’s a fact: people have a right of getting  digital privacy. Here’s one more: online publishers and businesses worldwide must respect those rights and provide visual anonymity when it’s needed. That’s why we decided to give you the fastest and easiest way to keep people’s privacy in photos. Meet Face Detection & Blurring  by MapmyIndia.
+
+<img src="./docs/images/FaceDetectionAndBlurring.gif?raw=true" width="1000px" style="margin-left:auto;margin-right:auto"/>
+
+<br>
+
+This tool completely automates Face Detection, Face Blurring in photos and helps you get the job done in just a few clicks without graphic editors and manual work. Keep reading to find out how it works, when it comes in handy, and how you can actually use it in MapmyIndia.
+
+Also, if you have any difficulties using this feature or suggestions on how we can improve the existing functionality, feel free to create a post in our Community Area.
+
+<br>
+
+## Face Detection 
+<br>
+
+<img src="./docs/images/faceplot.jpg"
+     alt="Markdown Monster icon"
+     width="800px" style="margin-left:auto;margin-right:auto" />
+<br>
+
+
+## Face Blurring
+<br>
+
+
+<img src="./docs/images/faceblur.jpg"
+     alt="Markdown Monster icon"
+     width="800px" style="margin-left:auto;margin-right:auto" />
+<br>
+
+
+This API Answers to every Question  regarding face Detection & Blurring, such as :
+
+1. Are there any faces of Human in the Image?
+2. Where the faces of Human in the Image?
+3. Can it return the location of the faces of Human?
+4. Can it plot the located boxes on the Image?
+5. Is the API able to blur the faces of Human detected ?
+6. Is It possible to Blur the image by giving the  boxes where the face lies ?
+
+## Features Highlights
+
+1. Helps find missing people
+2. Protects businesses against theft
+3. Strengthens security measures
+4. Reduces the number of touchpoints
+5. Improves photo organizations
+
+## How Algorithm Works
+
+First, the API takes input as an image. If the end user wants face detection then an image with bounding box on the faces would be displayed. However, if the end user wants face blurring then face blurred image would be displayed in the API as an output. the algorithm adds a layer that blurs them out with Gaussian Blurring (also known as smoothing), which reduces image details so that facial features can no longer be seen by the human eye.
+All operations are done with MapmyIndia Face Detection & Blurring API and take just a few minutes to set up.
+
+## SNAPSHOT(s)
+
+<img src="./docs/images/facedetection_API.png"
+     alt="Markdown Monster icon"
+     width="800px" style="margin-left:auto;margin-right:auto" />
+
+#### Documentation
+[Contact API Support](mailto:apisupport@mapmyindia.com)
+
+<br>
 
 ## Satellite Image Segmentation API
 The processing of satellite images for map representation with cutting edge CV/AI methodologies.
@@ -187,6 +262,11 @@ User can pass set of satellite images from two different time periods to see the
 The Geojson output can be visualized on mGIS or any geo spatial platform to analyze.
 
 <br>
+<br>
+<br>
+<br>
+<br>
+
 
 ## Raster Catalogue APIs
 This group of APIS are used to fetches Raster layerlist images, legends and bounds for the particular dataset.
