@@ -177,11 +177,11 @@ This group of APIS are used to fetches Raster layerlist images, legends and boun
 <br>
 For any queries and support, please contact: 
 
-![](https://cdn.mapmyindia.com/mappls_web/maps_widget_v2/images/mappls.svg?service=google_gsuite)<br>
+[<img src="https://about.mappls.com/images/mappls-logo.svg" height="40"/> </p>](https://about.mappls.com/api/)
 Email us at [apisupport@mapmyindia.com](mailto:apisupport@mapmyindia.com)
 
 
-[<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://www.mapmyindia.com/api)
+![](https://www.mapmyindia.com/api/img/icons/support.png)
 [Support](https://www.mapmyindia.com/api/index.php#f_cont)
 Need support? contact us!
 
