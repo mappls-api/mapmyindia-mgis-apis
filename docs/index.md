@@ -1,4 +1,4 @@
-[![N|Solid](https://about.mappls.com/images/mappls-b-logo.svg)](https://www.mapmyindia.com/api/)
+[<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://www.mapmyindia.com/api)
 
 # MapmyIndia mGIS APIs
 
