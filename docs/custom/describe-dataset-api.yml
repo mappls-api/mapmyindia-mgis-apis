@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Describe Dataset API
   description: |-
-    *Describe Dataset API provides all attribute names except geometry against a dataset. <hr><br>![MapmyIndia logo](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+    *Describe Dataset API provides all attribute names except geometry against a dataset. <hr><br>![MapmyIndia logo](https://about.mappls.com/images/mappls-logo.svg)
 
     On a Mission to <b>"Make our world better through maps, location technologies & IoT"</b>, MapmyIndia is continuously enabling real time hyper-local information access through its map & location services. mGIS APIs are a part of mGIS platform and the document describes APIs usage and specifications for their integration into an application. The document covers :
     <ul><li>List of APIs along with use cases</ul></li> 
@@ -12,9 +12,9 @@ info:
     ## Important notes
      <ul><li><b>URLs</b>: the urls to use for UAT and Production are:  <ul><li>
      <b>Production</b>:
-    <code>https://mgis-api.mapmyindia.com/</code></li><li>
-     <b>UAT</b>:<code>https://mgis-preprod.mapmyindia.in/</code><li> To call our API, the
-    endpoint requires access-token authorization and the <code>access-token</code> needs to be . For example <code>https://mgis.mapmyindia.in/describeDataset </code> <br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
+    <code>https://mgis-api.mappls.com/</code></li><li>
+     <b>UAT</b>:<code>https://mgis-preprod.mappls.in/</code><li> To call our API, the
+    endpoint requires access-token authorization and the <code>access-token</code> needs to be . For example <code>https://mgis.mappls.in/describeDataset </code> <br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
   contact:
     name: MapmyIndia API Support
     url: https://www.mapmyindia.com/api/#f_cont
@@ -28,9 +28,9 @@ tags:
   - name: Describe Dataset API
     description: Describe Dataset API is used to provide all attribute names except geometry against a dataset.
 servers:
-  - url: https://mgis-api.mapmyindia.com/
+  - url: https://mgis-api.mappls.com/
     description: Production server for mGIS APIs
-  - url: https://mgis-preprod.mapmyindia.in/
+  - url: https://mgis-preprod.mappls.in/
     description: UAT server for mGIS APIs testing
 paths:
   /describeDataset:
