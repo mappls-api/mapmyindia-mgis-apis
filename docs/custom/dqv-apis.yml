@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: DQV (Dataset, Query and Validate) API
   description: |-
-    *Dataset, Query and Validate API is a unified API that will provide the following functionality:* <ul><li>Fetches the entire dataset.</li> <li>Fetches the results of the query applied on the single dataset.</li> <li>Fetches the results of the query applied on the two datasets (CROSS JOIN).</li> <li>Validates the query applied.</li> <li>Arithmetic Operations(addition, subtraction, multiplication and division) can be performed within a dataset.</li> <li>Aggregate Operations(Count, Average, Max, Median, Min, StdDev, and Sum) can be performed within a dataset.</li> <li>Geometric Operations(Area, Buffer, Centroid, Distance and Intersection) can be performed within a dataset as well as between 2 user-defined geometries.</li> <li>Order By with query applied on the dataset.</li> <li>Group By with query applied on the dataset.</li> <li>Order By and Group By with query applied on the dataset.</li> <li>Order By on the entire dataset.</li> <li>Group By  on the entire dataset.</li> <li>Order By and Group By  on the entire dataset.</li> <li>Geometric function (length and area) with query on single route.</li> <li> Geometric function (length and area) without query on single route.</li></ul><br><br><hr><br>![MapmyIndia logo](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+    *Dataset, Query and Validate API is a unified API that will provide the following functionality:* <ul><li>Fetches the entire dataset.</li> <li>Fetches the results of the query applied on the single dataset.</li> <li>Fetches the results of the query applied on the two datasets (CROSS JOIN).</li> <li>Validates the query applied.</li> <li>Arithmetic Operations(addition, subtraction, multiplication and division) can be performed within a dataset.</li> <li>Aggregate Operations(Count, Average, Max, Median, Min, StdDev, and Sum) can be performed within a dataset.</li> <li>Geometric Operations(Area, Buffer, Centroid, Distance and Intersection) can be performed within a dataset as well as between 2 user-defined geometries.</li> <li>Order By with query applied on the dataset.</li> <li>Group By with query applied on the dataset.</li> <li>Order By and Group By with query applied on the dataset.</li> <li>Order By on the entire dataset.</li> <li>Group By  on the entire dataset.</li> <li>Order By and Group By  on the entire dataset.</li> <li>Geometric function (length and area) with query on single route.</li> <li> Geometric function (length and area) without query on single route.</li></ul><br><br><hr><br>[<img src="https://about.mappls.com/images/mappls-logo.svg" height="60"/> </p>](https://about.mappls.com/api/)
 
     On a Mission to <b>"Make our world better through maps, location technologies & IoT"</b>, MapmyIndia is continuously enabling real time hyper-local information access through its map & location services. mGIS APIs are a part of mGIS platform and the document describes APIs usage and specifications for their integration into an application. The document covers :
     <ul><li>List of APIs along with use cases</ul></li> 
@@ -12,9 +12,9 @@ info:
     ## Important notes
      <ul><li><b>URLs</b>: the urls to use for UAT and Production are:  <ul><li>
      <b>Production</b>:
-    <code>https://mgis-api.mapmyindia.com/</code></li><li>
-     <b>UAT</b>:<code>https://mgis-preprod.mapmyindia.in/</code><li> To call our API, the
-    endpoint requires access-token authorization and the <code>access-token</code> needs to be entered. For example <code>https://mgis.mapmyindia.in/query_validation </code> <br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
+    <code>https://mgis-api.mappls.com/</code></li><li>
+     <b>UAT</b>:<code>https://mgis-preprod.mappls.in/</code><li> To call our API, the
+    endpoint requires access-token authorization and the <code>access-token</code> needs to be entered. For example <code>https://mgis.mappls.in/query_validation </code> <br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
   contact:
     name: MapmyIndia API Support
     url: https://www.mapmyindia.com/api/#f_cont
@@ -28,9 +28,9 @@ tags:
   - name: Dataset, Query and Validate (DQV) API
     description: DQV API is used to fetch the entire dataset, fetch the results of the query applied on the dataset and validate the query applied.
 servers:
-  - url: https://mgis-api.mapmyindia.com/
+  - url: https://mgis-api.mappls.com/
     description: Production server for mGIS APIs
-  - url: https://mgis-preprod.mapmyindia.in/
+  - url: https://mgis-preprod.mappls.in/
     description: UAT server for mGIS APIs testing
 paths:
   /getDataset:
