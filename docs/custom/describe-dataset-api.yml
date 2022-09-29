@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Describe Dataset API
   description: |-
-    *Describe Dataset API provides all attribute names except geometry against a dataset. <hr><br>![MapmyIndia logo](https://about.mappls.com/images/mappls-logo.svg)
+    *Describe Dataset API provides all attribute names except geometry against a dataset. <hr><br>[<img src="https://about.mappls.com/images/mappls-logo.svg" height="60"/> </p>](https://about.mappls.com/api/)
 
     On a Mission to <b>"Make our world better through maps, location technologies & IoT"</b>, MapmyIndia is continuously enabling real time hyper-local information access through its map & location services. mGIS APIs are a part of mGIS platform and the document describes APIs usage and specifications for their integration into an application. The document covers :
     <ul><li>List of APIs along with use cases</ul></li> 
