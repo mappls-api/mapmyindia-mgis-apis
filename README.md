@@ -74,31 +74,31 @@ GEOJSON | KML | CSV | XLSX | XLS | SHP(ZIP) | XLSM | XLT | XLTX
 This API is used to save user dataset with multiple saving options like append, truncate etc. on mGIS cloud with basic visualisation style.
 
 #### Documentation
-[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20SAT%20APIs)
+[Click here](https://mappls-api.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20SAT%20APIs)
 
 ### Describe Dataset API
 Describe Dataset API provides all attribute names along with the data type of a dataset.
 
 #### Documentation
-[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20Describe%20Dataset%20API)
+[Click here](https://mappls-api.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20Describe%20Dataset%20API)
 
 ### Get Layer List API
 This API lists down all the datasets that exist on an mGIS user’s cloud along with the geometry type of each dataset.
 
 #### Documentation
-[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20Get%20Layer%20List%20and%20Legends%20APIs)
+[Click here](https://mappls-api.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20Get%20Layer%20List%20and%20Legends%20APIs)
 
 ### Get Geometry Type API
 This API returns the geometry type of a single dataset (Line/Point /Polygon/Multi Geometry).
 
 #### Documentation
-[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20Get%20Geometry%20Type%20API)
+[Click here](https://mappls-api.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20Get%20Geometry%20Type%20API)
 
 ### Get Dataset API
 This API reads a dataset with options like read entire dataset, read only specific attributes of a dataset etc.
 
 #### Documentation
-[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20Get%20Dataset%20API)
+[Click here](https://mappls-api.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20Get%20Dataset%20API)
 
 <br>
 
@@ -132,7 +132,7 @@ This group of APIs are used to perform different data analytics and save results
 <img src="./docs/images/04_QueryBuilder.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
-[Click here](https://mapmyindia.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Dataset%20Query%20And%20Validation%20APIs)
+[Click here](https://mappls-api.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Dataset%20Query%20And%20Validation%20APIs)
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/dataset-query-and-validation-apis.mp4)
 
