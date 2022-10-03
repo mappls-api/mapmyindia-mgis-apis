@@ -1,6 +1,6 @@
 [<img src="https://about.mappls.com/images/mappls-logo.svg" height="60"/> </p>](https://about.mappls.com/api/)
 
-# MapmyIndia mGIS APIs
+# Mappls mGIS APIs
 
 ## Introduction
 Using these APIs developers can fully leverage and embed the power of GeoSpatial Analytics, GIS and location intelligence and AI. These APIs allow a developer to integrate into their own application the power and full set of functionalities of the mGIS product and platform.
