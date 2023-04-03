@@ -559,9 +559,6 @@ paths:
       summary: Fetches the results of the query applied between two dataset as well as between one datset and user defimed geometry.
       description: User can performed both the following tasks:<li>Non Spatial Query</li><li>Spatial Query</li><br>For spatial query user can perform the query between 2 datasets as well as between one dataset and user defined geometry in geojson format. Whereas Non-Spatial Query is only applicable between 2 datasets.
       operationId: catchement_queryId
-      requestBody:
-        required: 'true'
-        $ref: '#/components/requestBodies/objSave'
       parameters:
         - $ref: '#/components/parameters/queryTypeParamCatchment'
         - $ref: '#/components/parameters/datasetSourceParam'
