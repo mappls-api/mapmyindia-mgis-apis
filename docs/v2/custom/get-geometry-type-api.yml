@@ -1,0 +1,202 @@
+openapi: 3.0.1
+info:
+  title: Get Geometry Type API
+  description: |-
+    *Get Geometry Type API fetches the bounds of the geometry type of the dataset published in the corresponding workspce of the user and geometry of the dataset.<br><br><hr><br>![MapmyIndia logo](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+
+    On a Mission to <b>"Make our world better through maps, location technologies & IoT"</b>, MapmyIndia is continuously enabling real time hyper-local information access through its map & location services. mGIS APIs are a part of mGIS platform and the document describes APIs usage and specifications for their integration into an application. The document covers :
+    <ul><li>List of APIs along with use cases</ul></li>
+    <ul><li>Explanation of resources and query parameters</ul></li>
+    <ul><li>Listing of response structure and data type</ul></li>
+
+    ## Important notes
+     <ul><li><b>URLs</b>: the urls to use for UAT and Production are:  <ul><li>
+     <b>Production</b>:
+    <code>https://mgis-apiv2.mappls.com/</code></li><li>
+     <b>UAT</b>:<code>https://mgis-preprod.mapmyindia.in/</code><li> To call our API, the
+    endpoint requires access-token authorization and the <code>access-token</code> needs to be entered. For example <code>https://mgis.mapmyindia.in/getFeatureCentroid </code> <br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
+  contact:
+    name: MapmyIndia API Support
+    url: https://www.mapmyindia.com/api/#f_cont
+    email: apisupport@mapmyindia.com
+  termsOfService: https://www.mapmyindia.com/api/terms-&-conditions
+  version: V2.0.0
+  license:
+    name: Revised BSD-3 Clause
+    url: https://github.com/MapmyIndia/
+tags:
+  - name: Get Feature Centroid/ Geometry Type API
+    description: Fetches the bounds of feature(s) of the dataset published in the corresponding workspace of the user.
+servers:
+  - url: https://mgis-apiv2.mappls.com/
+    description: Production server for mGIS APIs
+  - url: https://mgis-preprod.mapmyindia.in/
+    description: UAT server for mGIS APIs testing
+paths:
+  /getGeometryType:
+    get:
+      tags:
+        - Get Feature Centroid/ Geometry Type API
+      summary: Fetches Geometry type of datasetNme
+      description: Fetches Geometry type of datasetNme includes vector and raster both.
+      operationId: getgeometryID
+      parameters:
+        - $ref: '#/components/parameters/datasetNmeParam'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getGeometryType'
+        '400':
+          description: Bad Request, User made an error while creating a valid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject400'
+        '401':
+          description: Unauthorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObjectCommon401'
+        '404':
+          description: No data found in database.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObjectCommon'
+        '500':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject500'
+components:
+  parameters:
+    datasetNmeParam:
+      name: datasetNme
+      in: query
+      description: The dataset name whose feature centroid or geometry is required.
+      required: true
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: india
+    featureIDParam:
+      name: featureID
+      in: query
+      description: The feature id of the dataset of whose centroid is to be fetched.
+      required: true
+      allowEmptyValue: false
+      schema:
+        type: number
+      example: 1
+  schemas:
+    getFeatureCentroidRes:
+      title: getFeatureCentroid
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '200'
+        success:
+          type: string
+          example: true
+        message:
+          type: string
+          example: ''
+        data:
+          type: object
+          properties:
+            centroid:
+              type: object
+              properties:
+                lat:
+                  type: string
+                  description: Latitude of the feature id.
+                  example: 10.845044999999999
+                lon:
+                  type: string
+                  description: Latitude of the feature id.
+                  example: 93.242508
+    getGeometryType:
+      title: getGeometryType
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '200'
+        success:
+          type: string
+          example: true
+        message:
+          type: string
+          example: ''
+        data:
+          type: object
+          description: layer's Geometry Type
+          example: linestring
+    ErrorObjectCommon:
+      title: ErrorObject
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '404'
+        message:
+          type: string
+          example: Bad request. Username not found.
+    ErrorObjectCommon401:
+      title: ErrorObject
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '401'
+        message:
+          type: string
+          description: Different error messages that might have occured while making a particular request to the server
+          example: Invalid Authorization.
+    ErrorObject400:
+      title: Geoserver ErrorObject
+      type: object
+      properties:
+        error:
+          type: string
+          description: Different error messages that might have occured while making a particular request to the server
+          example: Invalid Parameter value
+        message:
+          type: string
+          description: Different error messages that might have occured while making a particular request to the server
+          example: Layer not found.
+        auth:
+          type: string
+          example: unsuccessful
+        code:
+          type: number
+          description: Error code.
+          example: 400
+    ErrorObject500:
+      title: Internal Server ErrorObject
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '500'
+        message:
+          type: string
+          description: Different error messages that might have occured while making a particular request to the server
+          example: Something went wrong.
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []
