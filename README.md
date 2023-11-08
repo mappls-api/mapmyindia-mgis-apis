@@ -150,7 +150,7 @@ This group consists of multiple APIs that allow users to visualise and analyse t
 <img src="./docs/images/visualization_section6.gif?raw=true" width="800px" style="margin-left:auto;margin-right:auto"/>
 
 #### Documentation
-[Click here](https://mappls-api.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20SAT%20APIs)
+[Click here](https://mappls-api.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Data%20Operations%20APIs%20%3E%20v2%20%3E%20Layer%20Visualization%20and%20Info%20API)
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/layer-visualizationandinfo-api.mp4)
 
