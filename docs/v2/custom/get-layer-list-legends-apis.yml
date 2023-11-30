@@ -87,7 +87,7 @@ paths:
             image/png:
               schema:
                 type: string
-                format: binary
+                example : Image
         '500':
           description: 'Bad Request, User made an error while creating a valid request.'
           content:
@@ -189,16 +189,25 @@ components:
       example: 20
   schemas:
     getLayersListRes:
-      type: array
-      items:
-        type: object
-        properties:
-          layername:
-            type: string
-            example: geocode_ii
-          geometrytype:
-            type: string
-            example: POLYGON
+      title: Data Adaptor
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '200'
+        success:
+          type: string
+          example: true
+        message:
+          type: string
+          description: Make connection with database with valid credentials.
+          example: ''
+        data:
+          example:
+            layername: geocode_ii
+            geometrytype: POLYGON
+            source: example
     ErrorObjectCommon:
       title: ErrorObject
       type: object
