@@ -496,7 +496,7 @@ paths:
       operationId: catchement_queryId
       requestBody:
         required: 'true'
-        $ref: '#/components/requestBodies/objSave'
+        $ref: '#/components/requestBodies/catchement_body'
       parameters:
         - $ref: '#/components/parameters/queryTypeParamCatchment'
         - $ref: '#/components/parameters/datasetSourceParam'
@@ -567,6 +567,49 @@ paths:
 components:
   requestBodies:
     Geometry:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              geometry:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    example: FeatureCollection
+                  features:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        type:
+                          type: string
+                          example: Feature
+                        properties:
+                          type: object
+                        geometry:
+                          type: object
+                          properties:
+                            type:
+                              type: string
+                              example: Polygon
+                            coordinates:
+                              type: array
+                              items:
+                                type: string
+                                example:
+                                  - - 76.70536461634572
+                                    - 24.494231162556787
+                                  - - 83.22072641537056
+                                    - 24.494231162556787
+                                  - - 83.22072641537056
+                                    - 25.48224832491816
+                                  - - 76.70536461634572
+                                    - 25.48224832491816
+                                  - - 76.70536461634572
+                                    - 24.494231162556787
+    catchement_body:
       content:
         application/json:
           schema:
