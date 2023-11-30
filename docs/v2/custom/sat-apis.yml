@@ -4,7 +4,11 @@ info:
   description: |-
     *SAT API is responsible for adding the datasets in different formats to the mGIS engine with some default style so that datasets can be visualized on mGIS platform. It also provide the functionality to create subsets from the already existing datasets.*  <ul> <li><b>Features</b>  <ul> <li>Supports multiple formats for dataset such as <ul> <li>GEOJSON</li> <li>KML</li> <li>CSV</li> <li>XLSX</li> <li>XLS</li> <li>SHP</li> <li>XLSM</li> <li>XLT</li> <li>XLTX</li> </ul> </li> <li> Let the users create subsets from their pre-existing dataset so that further be manipulated according to user's need </li> </ul> </li> </ul> <br> <hr> <br> <p> ![MapmyIndialogo](https://www.mapmyindia.com/api/img/mapmyindia-api.png) On a Mission to  <b>"Make our world better through maps, location technologies & IoT" </b>, MapmyIndia is continuously enabling real time hyper-local information access through its map & location services. mGIS APIs are a part of mGIS platform and the document describes APIs usage and specifications for their integration into an application. The document covers : </p> <ul> <li>List of APIs along with use cases</li> <li>Explanation of resources and query parameters</li> <li>Listing of response structure and data type</li> </ul>
     ## Important notes
-    <ul> <li>  <b>URLs</b>: the urls to use for UAT and Production are:  <ul> <li> <b>Production</b>:<code>https://mgis-apiv2.mappls.com/</code>  </li> <li> <b>UAT</b>:<code>https://mgis-preprod.mapmyindia.in/</code>  </li> <li>To call our API, the endpoint requires access-token authorization and the <code>access-token</code> needs to be . For example <code>https://mgis-preprod.mapmyindia.in/example </code>Pass header as <code>Authorization:Bearer access_token</code> </li> </ul> </li> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.If you have some non-technical or commercial queries, contact your service account manager </li> </ul>
+     <ul><li><b>URLs</b>: the urls to use for Production environment are:  <ul><li>
+     <b>Production</b>:
+    <code>https://mgis-apiv2.mappls.com/</code></li>
+    <li>To call our API, the
+    endpoint requires access-token authorization and the <code>access-token</code> needs to be .<br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
   contact:
     name: MapmyIndia API Support
     url: https://www.mapmyindia.com/api/#f_cont
@@ -20,8 +24,6 @@ tags:
 servers:
   - url: https://mgis-apiv2.mappls.com/
     description: Production server for mGIS APIs
-  - url: https://mgis-preprod.mapmyindia.in/
-    description: UAT server for mGIS APIs testing
 paths:
   /sat/saveDataset/object:
     post:
