@@ -9,12 +9,13 @@ info:
     <ul><li>Explanation of resources and query parameters</ul></li>
     <ul><li>Listing of response structure</ul></li>
 
-    ## Important notes
-     <ul><li><b>URLs</b>: the urls to use for UAT and Production are:  <ul><li>
+     ## Important notes
+     <ul><li><b>URLs</b>: the urls to use for Production environment is:  <ul><li>
      <b>Production</b>:
-    <code>https://mgis-api.mappls.com/</code></li><li>
-     <b>UAT</b>:<code>https://mgis-preprod.mappls.in/</code><li> To call our API, the
-    endpoint requires access-token authorization and the <code>access-token</code> needs to be entered. For example <code>https://mgis.mappls.in/getLayersList </code> <br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
+    <code>https://mgis-apiv2.mappls.com/</code></li>
+    <li>To call our API, the
+    endpoint requires access-token authorization and the <code>access-token</code> needs to be .<br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
+
   contact:
     name: MapmyIndia API Support
     url: 'https://www.mapmyindia.com/api/#f_cont'
@@ -25,10 +26,8 @@ tags:
   - name: L3 (Layer List and Legends) API
     description: Fetches the names of all the datasets available in the user's workspace on the geoserver.
 servers:
-  - url: 'https://mgis-api.mappls.com/'
+  - url: 'https://mgis-apiv2.mappls.com/'
     description: Production server for mGIS APIs
-  - url: 'https://mgis-preprod.mappls.in/'
-    description: UAT server for mGIS APIs testing
 paths:
   /getLayersList:
     get:
