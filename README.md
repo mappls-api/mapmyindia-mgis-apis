@@ -16,7 +16,7 @@ which can be leveraged by enterprise and consumer
 - [Dataset Query & Validation APIs](#dataset-query-and-validation-apis)
 - [Layer Visualization & Info APIs](#layer-visualization-and-info-apis)
 - [Raster Catalogue APIs](#raster-catalogue-apis)
-- [Satellite Image Segmentation API]()
+- [Satellite Image Segmentation API](#satellite-image-segmentation-api)
 
 
 ## How mGIS APIs Enhance Value of any Solution
@@ -187,7 +187,7 @@ Our Satellite Image Segmentation API automatically categorizes things in the ima
 ![](/docs/images/imageSegmentation.gif?raw=true)
 
 #### Documentation
-[Click here](https://mappls-api.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Dataset%20Query%20And%20Validation%20APIs)
+[Click here](https://mappls-api.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=CV%20AI-ML%20APIs%20%3E%20v2%20%3E%20Satellite%20Image%20Segmentation%20API)
 
 
 The API detects and categorizes the below objects:
