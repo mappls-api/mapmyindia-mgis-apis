@@ -16,6 +16,8 @@ which can be leveraged by enterprise and consumer
 - [Dataset Query & Validation APIs](#dataset-query-and-validation-apis)
 - [Layer Visualization & Info APIs](#layer-visualization-and-info-apis)
 - [Raster Catalogue APIs](#raster-catalogue-apis)
+- [Satellite Image Segmentation API]()
+
 
 ## How mGIS APIs Enhance Value of any Solution
 mGIS can serve different types of customers on the basis of the type of analytics
@@ -163,10 +165,6 @@ This API fetches information of a feature that lies on the x and y pixel at whic
 This API fetches the legend of a dataset as an image which can then be used by developers on their platform to display on canvas (similar to mGIS).
 
 <br>
-<br>
-<br>
-<br>
-
 
 ## Raster Catalogue APIs
 This group of APIS are used to fetches Raster layerlist images, legends and bounds for the particular dataset.
@@ -178,6 +176,35 @@ This group of APIS are used to fetches Raster layerlist images, legends and boun
 
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/data-operation.mp4)
+
+<br>
+
+## Satellite Image Segmentation API
+The processing of satellite images for map representation with cutting edge CV/AI methodologies.
+
+Our Satellite Image Segmentation API automatically categorizes things in the image and generates a map view from satellite images.
+
+![](/docs/images/imageSegmentation.gif?raw=true)
+
+#### Documentation
+[Click here](https://mappls-api.github.io/mapmyindia-mgis-apis/mgis-apis.html?urls.primaryName=Dataset%20Query%20And%20Validation%20APIs)
+
+
+The API detects and categorizes the below objects:
+- Footprint
+- Roads
+- Soil
+- Vegetation
+- Water
+
+User can pass set of satellite images from two different time periods to see the change in the development like building footprints and road build over time.
+
+The Geojson output can be visualized on mGIS or any geo spatial platform to analyze.
+<br>
+
+
+
+
 <br>
 
 For any queries and support, please contact: 
@@ -202,7 +229,7 @@ Need support? contact us!
 
 
 
-<div align="center">@ Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
+<div align="center">@ Copyright 2024 CE Info Systems Ltd. All Rights Reserved.</div>
 
 <div align="center"> <a href="https://about.mappls.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://about.mappls.com/about/privacy-policy">Privacy Policy</a> | <a href="https://about.mappls.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://about.mappls.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://about.mappls.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 

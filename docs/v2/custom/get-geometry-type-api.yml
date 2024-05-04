@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Get Geometry Type API
   description: |-
-    *Get Geometry Type API fetches the bounds of the geometry type of the dataset published in the corresponding workspce of the user and geometry of the dataset.<br><br><hr><br>![MapmyIndia logo](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+    *Get Geometry Type API fetches the bounds of the geometry type of the dataset published in the corresponding workspce of the user and geometry of the dataset.<br><br><hr><br>![MapmyIndia logo](https://about.mappls.com/images/mappls-logo.svg)
 
     On a Mission to <b>"Make our world better through maps, location technologies & IoT"</b>, MapmyIndia is continuously enabling real time hyper-local information access through its map & location services. mGIS APIs are a part of mGIS platform and the document describes APIs usage and specifications for their integration into an application. The document covers :
     <ul><li>List of APIs along with use cases</ul></li>

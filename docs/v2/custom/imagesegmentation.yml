@@ -1,0 +1,256 @@
+openapi: 3.0.1
+info:
+  title: Satellite Image Segmentation API
+  description: >-
+    Satellite Image Segmentation API
+    The API detects and categorizes the below objects:
+        <ul>
+            <li>Footprint</li>
+            <li>Roads</li>
+            <li>Soil</li>
+            <li>Vegetation</li>
+            <li>Water</li>
+        </ul>
+        User can pass set of satellite images from two different time periods to see the change in the development like building footprints and road build over time.
+
+    The Geojson output can be visualized on mGIS or any geo spatial platform to analyze.
+    <br><br><hr><br>![MapmyIndia
+    logo](https://about.mappls.com/images/mappls-logo.svg)
+
+
+    On a Mission to <b>"Make our world better through maps, location
+    technologies & IoT"</b>, MapmyIndia is continuously enabling real time
+    hyper-local information access through its map & location services. mGIS
+    APIs are a part of mGIS platform and the document describes APIs usage and
+    specifications for their integration into an application. The document
+    covers :
+
+    <ul><li>List of APIs along with use cases</ul></li> 
+
+    <ul><li>Explanation of resources and query parameters</ul></li>
+
+    <ul><li>Listing of response structure and data type</ul></li>
+
+
+    ## Important notes
+     <ul><li><b>URLs</b>: the urls to use for UAT and Production are:  <ul><li>
+     <b>Production</b>:
+    <code>https://mgis-apiv2.mappls.com/</code></li>
+    <li>To call our API, the
+    endpoint requires access-token authorization and the <code>access-token</code> needs to be .<br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
+  contact:
+    name: MapmyIndia API Support
+    url: https://www.mapmyindia.com/api/#f_cont
+    email: apisupport@mapmyindia.com
+  termsOfService: https://www.mapmyindia.com/api/terms-&-conditions
+  version: V2.0.0
+  license:
+    name: Revised BSD-3 Clause
+    url: https://github.com/MapmyIndia/
+tags:
+  - name: Satellite Image Segmentation API
+    description: Fetches the features of the particular feature provided.
+servers:
+  - url: https://mgis-apiv2.mappls.com/
+    description: Production server for mGIS APIs
+paths:
+  /ai_ml/imageSegmentation:
+    post:
+      tags:
+        - Satellite Image Segmentation API
+      summary: >-
+        Returns the array of features which contains objects of geometry of the
+        uploaded image.
+      description: >-
+        Fetches the featureList of the uploaded image on the basis of the
+        geotag, featureNme, bounds provided by the user. File, geotag,
+        featureNme are the mandatory parameters.
+      operationId: describeDatasetGet
+      requestBody:
+        $ref: '#/components/requestBodies/imageSeg'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/describeDatasetRes'
+        '400':
+          description: Bad Request, User made an error while creating a valid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject400'
+        '500':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject500'
+      deprecated: false
+  
+components:
+  requestBodies:
+    imgClas:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              file:
+                description: Image file in .tiff or .jpg or .png. formats
+                type: string
+                format: binary
+              checkClass:
+                description: >-
+                  Array with possible values Bare Soil, Buildings, Pavement,
+                  Trees, Grass, Water, Sand.
+                type: array
+                items:
+                  type: string
+                  example:
+                    - Bare soil
+                    - Water
+            required:
+              - file
+    licplate:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              file:
+                description: Image file in .jpg, .jpeg and .png formats
+                type: string
+                format: binary
+            required:
+              - file
+    faceBlur:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              file:
+                description: Image file in .jpg, .jpeg and .png formats
+                type: string
+                format: binary
+            required:
+              - file
+    blurbox:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              file:
+                description: Image file in .jpg, .jpeg and .png formats
+                type: string
+                format: binary
+              box:
+                description: Takes bounding boxes of the region you want to blur.
+                type: string
+            required:
+              - file
+              - box
+    imageSeg:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              file:
+                description: Image file in .tiff or .jpg or .png. formats
+                type: string
+                format: binary
+              geotag:
+                description: >-
+                  Case1 - Will be 0 for .jpeg, .jpg and .png images without
+                  bounds and will return geoJson reponse in pixels.<br>Case2- 
+                  Will be 1 for .tiff and .tif images without bounds and will
+                  return geoJson reponse in pixels.<br>Case3-Will be 2 for .jpg,
+                  .jpeg and .png images with bounds and returns geoJson
+                  response.
+                type: string
+              featureNme:
+                description: 'Can be either FP, RD, SOIL, VEG and WATER. '
+                type: string
+              bounds:
+                description: >-
+                  will be an object containing south-west and north-east corner
+                  of the image uploaded. Bounds is mandatory in case when geotag
+                  value is 2 and is not required in case when geotag value is 0
+                  and 1.
+                type: object
+              imageType:
+                description: type of image i.e. google or bhuwan.
+                type: string
+              scale:
+                description: integer value which should greater than 0.
+                type: integer
+            required:
+              - file
+              - geotag
+              - featureNme
+  schemas:
+    describeDatasetRes:
+      title: result
+      type: object
+      properties:
+        Features:
+          type: array
+          items:
+            type: object
+            properties:
+              geometry:
+                type: object
+                properties:
+                  coordinates:
+                    type: array
+                    items:
+                      type: string
+                      example:
+                        - - 189
+                          - 0
+                        - - 189
+                          - 2
+                        - - 190
+                          - 3
+                        - - 190
+                          - 9
+                        - - 185
+                          - 14
+    ErrorObject400:
+      title: Geoserver ErrorObject
+      type: object
+      properties:
+        error:
+          type: string
+          description: >-
+            Different error messages that might have occured while making a
+            particular request to the server
+          example: Mandatory Parameter Missing
+        code:
+          type: number
+          description: Error code.
+          example: 400
+    ErrorObject500:
+      title: Internal Server ErrorObject
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '500'
+        error:
+          type: string
+          description: >-
+            Different error messages that might have occured while making a
+            particular request to the server
+          example: Something went wrong.
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []

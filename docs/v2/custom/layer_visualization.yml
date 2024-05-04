@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Get Map and Get FeatureInfo API
   description: |-
-    *Get Map API is a unified API that will provide the following functionality:* <ul><li>Fetch maptiles of the dataset name of a bounding box.</li> <li>Fetch feature information of the dataset name of a bounding box.</li> <li>Fetch maptiles of the queried layers between 2 datasets.</li> <li> Fetch maptiles of the geometric function performed on single dataset.</li> </ul><br><br><hr><br>![MapmyIndia logo](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+    *Get Map API is a unified API that will provide the following functionality:* <ul><li>Fetch maptiles of the dataset name of a bounding box.</li> <li>Fetch feature information of the dataset name of a bounding box.</li> <li>Fetch maptiles of the queried layers between 2 datasets.</li> <li> Fetch maptiles of the geometric function performed on single dataset.</li> </ul><br><br><hr><br>![MapmyIndia logo](https://about.mappls.com/images/mappls-logo.svg)
 
     On a Mission to <b>"Make our world better through maps, location technologies & IoT"</b>, MapmyIndia is continuously enabling real time hyper-local information access through its map & location services. mGIS APIs are a part of mGIS platform and the document describes APIs usage and specifications for their integration into an application. The document covers :
     <ul><li>List of APIs along with use cases</ul></li>
