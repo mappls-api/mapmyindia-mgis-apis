@@ -104,7 +104,7 @@ components:
     datasetNme:
       name: datasetNme
       in: query
-      description: geoserver layername
+      description: mGIS layername
       required: true
       allowEmptyValue: false
       schema:
