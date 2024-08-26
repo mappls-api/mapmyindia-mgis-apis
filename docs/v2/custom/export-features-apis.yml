@@ -1,0 +1,210 @@
+openapi: 3.0.1
+info:
+  title: Export Feature API
+  description: |-
+    *Export Feature API provides the following functionality: <ul><li>Fetches the names of all the dataset files available in the user's workspace on the server.</li> <li>Save the dataset files in .kml or .shp or .kmz files on server.</li></ul><br><br><hr><br>![MapmyIndia logo](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+
+    On a Mission to <b>"Make our world better through maps, location technologies & IoT"</b>, MapmyIndia is continuously enabling real time hyper-local information access through its map & location services. mGIS APIs are a part of mGIS platform and the document describes APIs usage and specifications for their integration into an application. The document covers :
+    <ul><li>List of APIs along with use cases</ul></li> 
+    <ul><li>Explanation of resources and query parameters</ul></li>
+    <ul><li>Listing of response structure and data type</ul></li>
+
+    ## Important notes
+     <ul><li><b>URLs</b>: the urls to use for UAT and Production are:  <ul><li>
+     <b>Production</b>:
+    <code>https://mgis-apiv2.mappls.com/</code></li><li> To call our API, the
+    endpoint requires access-token authorization and the <code>access-token</code> needs to be entered. For example <code>https://mgis-apiv2.mappls.com/getLayersList </code> <br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
+  contact:
+    name: MapmyIndia API Support
+    url: https://www.mapmyindia.com/api/#f_cont
+    email: apisupport@mapmyindia.com
+  termsOfService: https://www.mapmyindia.com/api/terms-&-conditions
+  version: V2.0.0
+  license:
+    name: Revised BSD-3 Clause
+    url: https://github.com/MapmyIndia/
+tags:
+  - name: Export Feature API
+    description: Retrieves the filenames of all dataset files accessible within the user's workspace on the server
+servers:
+  - url: https://mgis-apiv2.mappls.com/
+    description: Production server for mGIS APIs
+paths:
+  /export_feature/export_list:
+    get:
+      tags:
+        - Export Feature API
+      summary: Fetches the names of all the dataset files available in the user's workspace on the server.
+      description: Fetches the names of all the dataset files available in the user's workspace on the server.
+      operationId: getFeatureListId
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getFeatureListRes'
+        '400':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject400list'
+      deprecated: false
+  /export_feature:
+    get:
+      tags:
+        - Export Feature API
+      summary: Save the dataset files in .kml or .shp or .kmz or .csv files on server.
+      description: Save the dataset files in .kml or .shp or .kmz or .csv files on server.
+      operationId: getLegendsImgId
+      parameters:
+        - $ref: '#/components/parameters/datasetNme'
+        - $ref: '#/components/parameters/fileType'
+      responses:
+        '200':
+          description: Response when file successfully saved on server.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getFeatureRes'
+        '404':
+          description: Bad Request, User made an error while creating a valid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject404export'
+      deprecated: false
+  /export_feature/delete_exports:
+    delete:
+      tags:
+        - Export Feature API
+      summary: Delete the dataset files in .kml or .shp or .kmz or .csv files on server.
+      description: Delete the dataset files in .kml or .shp or .kmz or .csv files on server.
+      operationId: deleteExport
+      parameters:
+        - $ref: '#/components/parameters/datasetNme'
+        - $ref: '#/components/parameters/fileType'
+      responses:
+        '200':
+          description: Response when file successfully saved on server.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/deleteFeatureRes'
+        '400':
+          description: Bad Request, User made an error while creating a valid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject400delete'
+      deprecated: false
+components:
+  parameters:
+    datasetNme:
+      name: datasetNme
+      in: query
+      description: geoserver layername
+      required: true
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: ind_rails
+    fileType:
+      name: fileType
+      in: query
+      description: Type of file you want to save(.kml or .shp).
+      required: true
+      allowEmptyValue: false
+      schema:
+        type: string
+      example: kml or shp or kmz or csv
+  schemas:
+    getFeatureRes:
+      type: object
+      properties:
+        code:
+          type: integer
+          example: 200
+        success:
+          type: string
+          example: true
+        message:
+          type: string
+          example: File downloaded successfully.
+        download_url:
+          type: string
+          example: https://mgis-apiv2.mappls.com/export_data/prj_ID/datasetNme_timestamp.fileType
+    deleteFeatureRes:
+      type: object
+      properties:
+        code:
+          type: integer
+          example: 200
+        success:
+          type: string
+          example: true
+        message:
+          type: string
+          example: File deleted successfully.
+        data:
+          type: object
+    getFeatureListRes:
+      type: object
+      properties:
+        code:
+          type: integer
+          example: 200
+        success:
+          type: string
+          example: true
+        message:
+          type: string
+          example: ''
+        data:
+          type: array
+          items:
+            type: string
+            example: abv_copy12.kml
+    ErrorObject400list:
+      title: Internal Server ErrorObject
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '400'
+        message:
+          type: string
+          description: Different error messages that might have occured while making a particular request to the server
+          example: Something went wrong while fetching information from server
+    ErrorObject404export:
+      title: Internal Server ErrorObject
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '404'
+        message:
+          type: string
+          description: Different error messages that might have occured while making a particular request to the server
+          example: No such layer found.
+    ErrorObject400delete:
+      title: Internal Server ErrorObject
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '400'
+        message:
+          type: string
+          description: Different error messages that might have occured while making a particular request to the server
+          example: Something went wrong while deleting file.
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []
