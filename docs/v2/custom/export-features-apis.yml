@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Export Feature API
   description: |-
-    *Export Feature API provides the following functionality: <ul><li>Fetches the names of all the dataset files available in the user's workspace on the server.</li> <li>Save the dataset files in .kml or .shp or .kmz or .geojson files on server.</li></ul><br><br><hr><br>![MapmyIndia logo](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+    *Export Feature API provides the following functionality: <ul><li>Fetches the names of all the dataset files available in the user's workspace on the server.</li> <li>Download the dataset files in .kml, .shp or .geojson files on server.</li></ul><br><br><hr><br>![MapmyIndia logo](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
 
     On a Mission to <b>"Make our world better through maps, location technologies & IoT"</b>, MapmyIndia is continuously enabling real time hyper-local information access through its map & location services. mGIS APIs are a part of mGIS platform and the document describes APIs usage and specifications for their integration into an application. The document covers :
     <ul><li>List of APIs along with use cases</ul></li> 
@@ -35,8 +35,8 @@ paths:
     get:
       tags:
         - Export Feature API
-      summary: Save the dataset files in .kml, .shp and .geojson files on server.
-      description: Save the dataset files in .kml, .shp and .geojson files on server.
+      summary: Download the dataset files in .kml, .shp or .geojson files on server.
+      description: Download the dataset files in .kml, .shp or .geojson files on server.
       operationId: getLegendsImgId
       parameters:
         - $ref: '#/components/parameters/datasetNme'
@@ -69,12 +69,12 @@ components:
     fileType:
       name: fileType
       in: query
-      description: Type of file you want to save(.kml or .shp).
+      description: Type of file you want to Download(.kml, .shp or .geojson).
       required: true
       allowEmptyValue: false
       schema:
         type: string
-      example: kml or shp or kmz or csv or geojson
+      example: .kml .shp or .geojson
   schemas:
     getFeatureRes:
       type: object
