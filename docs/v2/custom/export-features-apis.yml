@@ -74,7 +74,7 @@ components:
       allowEmptyValue: false
       schema:
         type: string
-      example: .kml .shp or .geojson
+      example: .kml, .shp or .geojson
   schemas:
     getFeatureRes:
       type: object
