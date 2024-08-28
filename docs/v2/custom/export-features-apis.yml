@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Export Feature API
   description: |-
-    *Export Feature API provides the following functionality: <ul><li>Fetches the names of all the dataset files available in the user's workspace on the server.</li> <li>Save the dataset files in .kml or .shp or .kmz files on server.</li></ul><br><br><hr><br>![MapmyIndia logo](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+    *Export Feature API provides the following functionality: <ul><li>Fetches the names of all the dataset files available in the user's workspace on the server.</li> <li>Save the dataset files in .kml or .shp or .kmz or .geojson files on server.</li></ul><br><br><hr><br>![MapmyIndia logo](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
 
     On a Mission to <b>"Make our world better through maps, location technologies & IoT"</b>, MapmyIndia is continuously enabling real time hyper-local information access through its map & location services. mGIS APIs are a part of mGIS platform and the document describes APIs usage and specifications for their integration into an application. The document covers :
     <ul><li>List of APIs along with use cases</ul></li> 
@@ -12,8 +12,9 @@ info:
     ## Important notes
      <ul><li><b>URLs</b>: the urls to use for UAT and Production are:  <ul><li>
      <b>Production</b>:
-    <code>https://mgis-apiv2.mappls.com/</code></li><li> To call our API, the
-    endpoint requires access-token authorization and the <code>access-token</code> needs to be entered. For example <code>https://mgis-apiv2.mappls.com/getLayersList </code> <br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
+    <code>https://mgis-apiv2.mappls.com/</code></li><li>
+     <b>UAT</b>:<code>https://mgis-preprod.mapmyindia.in/</code><li> To call our API, the
+    endpoint requires access-token authorization and the <code>access-token</code> needs to be entered. For example <code>https://mgis.mapmyindia.in/getLayersList </code> <br> Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
   contact:
     name: MapmyIndia API Support
     url: https://www.mapmyindia.com/api/#f_cont
@@ -30,33 +31,12 @@ servers:
   - url: https://mgis-apiv2.mappls.com/
     description: Production server for mGIS APIs
 paths:
-  /export_feature/export_list:
-    get:
-      tags:
-        - Export Feature API
-      summary: Fetches the names of all the dataset files available in the user's workspace on the server.
-      description: Fetches the names of all the dataset files available in the user's workspace on the server.
-      operationId: getFeatureListId
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/getFeatureListRes'
-        '400':
-          description: Internal server error.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorObject400list'
-      deprecated: false
   /export_feature:
     get:
       tags:
         - Export Feature API
-      summary: Save the dataset files in .kml or .shp or .kmz or .csv files on server.
-      description: Save the dataset files in .kml or .shp or .kmz or .csv files on server.
+      summary: Save the dataset files in .kml, .shp and .geojson files on server.
+      description: Save the dataset files in .kml, .shp and .geojson files on server.
       operationId: getLegendsImgId
       parameters:
         - $ref: '#/components/parameters/datasetNme'
@@ -75,36 +55,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorObject404export'
       deprecated: false
-  /export_feature/delete_exports:
-    delete:
-      tags:
-        - Export Feature API
-      summary: Delete the dataset files in .kml or .shp or .kmz or .csv files on server.
-      description: Delete the dataset files in .kml or .shp or .kmz or .csv files on server.
-      operationId: deleteExport
-      parameters:
-        - $ref: '#/components/parameters/datasetNme'
-        - $ref: '#/components/parameters/fileType'
-      responses:
-        '200':
-          description: Response when file successfully saved on server.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/deleteFeatureRes'
-        '400':
-          description: Bad Request, User made an error while creating a valid request.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorObject400delete'
-      deprecated: false
 components:
   parameters:
     datasetNme:
       name: datasetNme
       in: query
-      description: mGIS layername
+      description: layername
       required: true
       allowEmptyValue: false
       schema:
@@ -118,7 +74,7 @@ components:
       allowEmptyValue: false
       schema:
         type: string
-      example: kml or shp or kmz or csv
+      example: kml or shp or kmz or csv or geojson
   schemas:
     getFeatureRes:
       type: object
